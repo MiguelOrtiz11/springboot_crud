@@ -88,4 +88,10 @@
                     <form action="/editar-estudiante" method="post">
                         <div class="form-group">
                             <label for="idEstudiante">Seleccionar Estudiante:</label>
-
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

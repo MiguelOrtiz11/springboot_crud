@@ -10,6 +10,6 @@ public class ProfessorController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String showStudentPage() {
-        return "professor"; // Devuelve el nombre de la vista que mostrará la página exclusiva para estudiantes
+        return "professor";
     }
 }

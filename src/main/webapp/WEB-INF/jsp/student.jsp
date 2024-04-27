@@ -5,13 +5,13 @@
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2>Mi Información</h2>
+            <h2>Mi Informacion</h2>
         </div>
         <div class="panel-body">
             <p><strong>Nombre:</strong> ${name}</p>
-            <p><strong>Código:</strong> ${codigoEstudiante}</p>
+            <p><strong>Codigo:</strong> ${codigoEstudiante}</p>
             <p><strong>Programa:</strong> ${programa}</p>
-            <p><strong>Correo electrónico:</strong> ${correo}</p>
+            <p><strong>Correo electronico:</strong> ${correo}</p>
         </div>
     </div>
 
@@ -24,7 +24,7 @@
                 <thead>
                 <tr>
                     <th width="40%">Curso</th>
-                    <th width="30%">Nota Numérica</th>
+                    <th width="30%">Nota Numerica</th>
                     <th width="30%">Concepto</th>
                 </tr>
                 </thead>
@@ -49,7 +49,7 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th width="30%">Día</th>
+                    <th width="30%">Dia</th>
                     <th width="30%">Hora</th>
                     <th width="40%">Curso</th>
                 </tr>

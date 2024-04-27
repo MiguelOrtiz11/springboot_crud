@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/student")
 public class StudentController {
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String showStudentPage() {
         return "student";

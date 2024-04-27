@@ -21,7 +21,7 @@
                 <thead>
                 <tr>
                     <th width="40%">Nombre del Curso</th>
-                    <th width="30%">Código del Curso</th>
+                    <th width="30%">Codigo del Curso</th>
                     <th width="30%">Estudiantes</th>
                 </tr>
                 </thead>

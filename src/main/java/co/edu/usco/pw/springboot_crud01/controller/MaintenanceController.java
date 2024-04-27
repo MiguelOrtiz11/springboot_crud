@@ -10,6 +10,6 @@ public class MaintenanceController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String showStudentPage() {
-        return "maintenance"; // Devuelve el nombre de la vista que mostrará la página exclusiva para estudiantes
+        return "maintenance";
     }
 }
