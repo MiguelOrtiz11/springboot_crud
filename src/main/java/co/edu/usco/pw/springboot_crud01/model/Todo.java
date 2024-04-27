@@ -13,57 +13,56 @@ import javax.validation.constraints.Size;
 @Table(name = "todos")
 public class Todo {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	private String userName;
+    private String userName;
 
-	@Size(min = 10, message = "Enter at least 10 Characters...")
-	private String description;
+    private String description;
 
-	private Date targetDate;
-	
-	public Todo() {
-		super();
-	}
+    private Date targetDate;
 
-	public Todo(String user, String desc, Date targetDate, boolean isDone) {
-		super();
-		this.userName = user;
-		this.description = desc;
-		this.targetDate = targetDate;
-	}
+    public Todo() {
+        super();
+    }
 
-	public long getId() {
-		return id;
-	}
+    public Todo(String user, String desc, Date targetDate, boolean isDone) {
+        super();
+        this.userName = user;
+        this.description = desc;
+        this.targetDate = targetDate;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public Date getTargetDate() {
-		return targetDate;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setTargetDate(Date targetDate) {
-		this.targetDate = targetDate;
-	}
+    public Date getTargetDate() {
+        return targetDate;
+    }
+
+    public void setTargetDate(Date targetDate) {
+        this.targetDate = targetDate;
+    }
 }

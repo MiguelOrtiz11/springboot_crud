@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LogoutController {
 
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletRequest request,
-			HttpServletResponse response) {
-		
-		Authentication authentication = SecurityContextHolder.getContext()
-				.getAuthentication();
-		
-		if (authentication != null) {
-			new SecurityContextLogoutHandler().logout(request, response,
-					authentication);
-		}
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response) {
 
-		return "redirect:/";
-	}
+        Authentication authentication = SecurityContextHolder.getContext()
+                .getAuthentication();
+
+        if (authentication != null) {
+            new SecurityContextLogoutHandler().logout(request, response,
+                    authentication);
+        }
+
+        return "redirect:/";
+    }
 }
