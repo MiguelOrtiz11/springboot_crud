@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Sistema de notas</title>
+    <title>Sistema de registro de clases</title>
     <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
           rel="stylesheet">
 

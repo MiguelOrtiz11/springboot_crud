@@ -1,5 +1,5 @@
-<%@ include file="common/header.jsp"%>
-<%@ include file="common/navigation.jsp"%>
+<%@ include file="common/header.jsp" %>
+<%@ include file="common/navigation.jsp" %>
 
 <div class="container">
     <div class="alert alert-danger text-center" role="alert">

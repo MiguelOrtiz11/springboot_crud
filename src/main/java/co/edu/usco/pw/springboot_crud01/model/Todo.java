@@ -1,15 +1,17 @@
 package co.edu.usco.pw.springboot_crud01.model;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+
+// Por motivos de tiempo y no desajustar los controladores
+// no le cambio el nombre de la tabla
 @Table(name = "todos")
 public class Todo {
 
@@ -17,23 +19,47 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotNull
     private String userName;
 
-    private String description;
+    @NotNull
+    @Size(min = 10, max = 30)
+    private String nombre;
 
-    private Date targetDate;
+    @Size(max = 100)
+    private String descripcion;
 
+    @NotNull
+    private int salon;
+
+    @NotNull
+    private String horarioInicio;
+
+    @NotNull
+    private String horarioFin;
+
+    @NotNull
+    private String docenteEncargado;
+
+
+    // Metodo super
     public Todo() {
         super();
     }
 
-    public Todo(String user, String desc, Date targetDate, boolean isDone) {
-        super();
+    // Constructor
+    public Todo(long id, String docenteEncargado, String user, String nombre, String descripcion, String horarioInicio, int salon, String horarioFin) {
+        this.id = id;
+        this.docenteEncargado = docenteEncargado; //String
         this.userName = user;
-        this.description = desc;
-        this.targetDate = targetDate;
+        this.nombre = nombre; //String
+        this.descripcion = descripcion; //String
+        this.horarioInicio = horarioInicio; //String
+        this.salon = salon; //Int
+        this.horarioFin = horarioFin; //String
     }
 
+    // Setters y Getters
     public long getId() {
         return id;
     }
@@ -50,19 +76,52 @@ public class Todo {
         this.userName = userName;
     }
 
-    public String getDescription() {
-        return description;
+    public @NotNull @Size(min = 10, max = 30) String getNombre() {
+        return nombre;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setNombre(@NotNull @Size(min = 10, max = 30) String nombre) {
+        this.nombre = nombre;
     }
 
-    public Date getTargetDate() {
-        return targetDate;
+    public @Size(max = 100) String getDescripcion() {
+        return descripcion;
     }
 
-    public void setTargetDate(Date targetDate) {
-        this.targetDate = targetDate;
+    public void setDescripcion(@Size(max = 100) String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    @NotNull
+    public int getSalon() {
+        return salon;
+    }
+
+    public void setSalon(@NotNull int salon) {
+        this.salon = salon;
+    }
+
+    public @NotNull String getHorarioInicio() {
+        return horarioInicio;
+    }
+
+    public void setHorarioInicio(@NotNull String horarioInicio) {
+        this.horarioInicio = horarioInicio;
+    }
+
+    public @NotNull String getHorarioFin() {
+        return horarioFin;
+    }
+
+    public void setHorarioFin(@NotNull String horarioFin) {
+        this.horarioFin = horarioFin;
+    }
+
+    public @NotNull String getDocenteEncargado() {
+        return docenteEncargado;
+    }
+
+    public void setDocenteEncargado(@NotNull String docenteEncargado) {
+        this.docenteEncargado = docenteEncargado;
     }
 }

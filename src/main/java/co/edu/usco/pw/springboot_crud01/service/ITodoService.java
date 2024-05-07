@@ -1,5 +1,6 @@
 package co.edu.usco.pw.springboot_crud01.service;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 import java.util.List;
@@ -15,7 +16,8 @@ public interface ITodoService {
 
     void updateTodo(Todo todo);
 
-    void addTodo(String name, String desc, Date targetDate, boolean isDone);
+    void addTodo(long id, String docenteEncargado, String nombre, String descripcion,
+                 String horarioInicio, int salon, String horarioFin, String isDone);
 
     void deleteTodo(long id);
 

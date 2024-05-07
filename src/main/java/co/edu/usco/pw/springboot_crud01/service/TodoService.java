@@ -1,6 +1,5 @@
 package co.edu.usco.pw.springboot_crud01.service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +12,11 @@ import co.edu.usco.pw.springboot_crud01.repository.TodoRepository;
 @Service
 public class TodoService implements ITodoService {
 
+    // Inyecctar desde el repositorio
     @Autowired
     private TodoRepository todoRepository;
 
+    //Obtener valores
     @Override
     public List<Todo> getTodosByUser(String user) {
         return todoRepository.findByUserName(user);
@@ -32,8 +33,9 @@ public class TodoService implements ITodoService {
     }
 
     @Override
-    public void addTodo(String name, String desc, Date targetDate, boolean isDone) {
-        todoRepository.save(new Todo(name, desc, targetDate, isDone));
+    public void addTodo(long id, String docenteEncargado, String nombre, String descripcion,
+                        String horarioInicio, int salon, String horarioFin, String isDone) {
+        todoRepository.save(new Todo(id, docenteEncargado, nombre, descripcion, horarioFin, horarioFin, salon, isDone));
     }
 
     @Override

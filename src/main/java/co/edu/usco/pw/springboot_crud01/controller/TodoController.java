@@ -3,6 +3,7 @@ package co.edu.usco.pw.springboot_crud01.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -25,13 +26,6 @@ public class TodoController {
     @Autowired
     private ITodoService todoService;
 
-    @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        // Date - dd/MM/yyyy
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
-    }
-
 
     @RequestMapping(value = "/list-todos", method = RequestMethod.GET)
     public String showTodos(ModelMap model) {
@@ -50,6 +44,8 @@ public class TodoController {
 
         return principal.toString();
     }
+
+
 
     @RequestMapping(value = "/add-todo", method = RequestMethod.GET)
     public String showAddTodoPage(ModelMap model) {
